@@ -5,9 +5,10 @@
 #include <iostream>
 #include <sstream>
 
-TEST_CASE("Sending Data on cmd")
-
+TEST_CASE("Check print on console")
 {
 
+  REQUIRE(SOC_generate_values() == FINISH);
+  REQUIRE(temp_generate_values() == FINISH);
 
 }
