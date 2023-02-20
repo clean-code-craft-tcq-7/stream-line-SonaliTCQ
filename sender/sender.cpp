@@ -23,7 +23,7 @@ int SOC_generate_values()
 			print(soc_value);
 		}	
 	}
-	return FINISH;
+	return 1;
 }
 
 int temp_generate_values()
@@ -41,7 +41,7 @@ int temp_generate_values()
 			print(temp_value);
 		}
 	}
-	return FINISH;
+	return 1;
 }
 
 void print(int line)
