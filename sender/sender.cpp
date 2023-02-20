@@ -14,7 +14,7 @@ int SOC_generate_values()
 	int soc_value = 0;
 	ifstream SOC;
 	SOC.open("SOC.txt");
-	cout << "SOC sensor values are below:"<< endl;
+	//cout << "SOC sensor values are below:"<< endl;
 
 	while (SOC >> soc_value)
 	{
