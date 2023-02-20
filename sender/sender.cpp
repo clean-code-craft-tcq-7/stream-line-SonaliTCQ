@@ -19,7 +19,7 @@ int SOC_generate_values()
 	{
 		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE)
 		{ 
-			print(soc_value);
+			print_SOC(soc_value);
 		}	
 	}
 	return 1;
@@ -37,13 +37,18 @@ int temp_generate_values()
 	{
 		if (temp_value < TEMP_MAX_VALUE && temp_value > TEMP_MIN_VALUE)
 		{
-			print(temp_value);
+			print_temp(temp_value);
 		}
 	}
 	return 1;
 }
 
-void print(int line)
+void print_SOC(int line)
+{
+	cout << line << endl;
+}
+
+void print_temp(int line)
 {
 	cout << line << endl;
 }
