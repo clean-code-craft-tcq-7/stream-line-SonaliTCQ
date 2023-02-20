@@ -12,9 +12,9 @@ using namespace std;
 int SOC_generate_values()
 {
 	int soc_value = 0;
-	std::ifstream SOC;
-	SOC.open("./sender/SOC.txt", ios::out);
-	//cout << "SOC sensor values are below:"<< endl;
+	ifstream SOC;
+	SOC.open("./sender/SOC.txt");
+	cout << "SOC sensor values are below:"<< endl;
 	while (SOC >> soc_value)
 	{
 		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE)
@@ -22,8 +22,7 @@ int SOC_generate_values()
 			print(soc_value);
 		}	
 	}
-	int result = SOC.eof()?1:0;
-	return result;
+	return (SOC.eof()?1:0);
 }
 
 int temp_generate_values()
@@ -41,8 +40,7 @@ int temp_generate_values()
 			print(temp_value);
 		}
 	}
-	int result = temp.eof()?1:0;
-	return result;
+	return (temp.eof()?1:0);
 }
 
 void print(int line)
