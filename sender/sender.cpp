@@ -2,8 +2,6 @@
 #include<fstream>
 #include "sender.hpp"
 using namespace std;
-#include "SOC.txt"
-#include "Temp.txt"
 
 #define SOC_MAX_VALUE 20
 #define SOC_MIN_VALUE 0
@@ -25,7 +23,10 @@ int SOC_generate_values()
 			print(soc_value);
 		}	
 	}
-	return 1;
+	if(SOC == EOF)
+	{
+		return 1;
+	}
 }
 
 int temp_generate_values()
