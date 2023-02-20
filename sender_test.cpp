@@ -12,3 +12,16 @@ TEST_CASE("Check print on console")
   REQUIRE(temp_generate_values() == 1);
 
 }
+
+TEST_CASE("Check if more than min max values not sent to console")
+{
+  std::ostringstream oss;
+  std::streambuf* p_cout_streambuf = std::cout.rdbuf();
+  std::cout.rdbuf(oss.rdbuf());
+
+  void print(10);
+
+  std::cout.rdbuf(p_cout_streambuf);
+  
+  REQUIRE(oss.str() == "10\n");
+}
