@@ -12,10 +12,10 @@ using namespace std;
 int SOC_generate_values()
 {
 	int soc_value = 0;
-	ifstream SOC;
+	std::ifstream SOC;
 	SOC.open("SOC.txt", ios::out);
 	//cout << "SOC sensor values are below:"<< endl;
-	while (std:: ifstream SOC >> soc_value)
+	while (SOC >> soc_value)
 	{
 		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE)
 		{ 
