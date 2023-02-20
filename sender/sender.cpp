@@ -9,10 +9,11 @@ using namespace std;
 #define TEMP_MIN_VALUE 10
 
 
-void main()
+int main()
 {
 	SOC_generate_values();
 	temp_generate_values();
+	return 0;
 }
 
 void SOC_generate_values()
