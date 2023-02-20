@@ -13,7 +13,7 @@ int SOC_generate_values()
 {
 	int soc_value = 0;
 	std::ifstream SOC;
-	SOC.open("SOC.txt", ios::out);
+	SOC.open("./sender/SOC.txt", ios::out);
 	//cout << "SOC sensor values are below:"<< endl;
 	while (SOC >> soc_value)
 	{
@@ -30,7 +30,7 @@ int temp_generate_values()
 {
 	int temp_value = 0;
 	ifstream temp;
-	temp.open("Temp.txt");
+	temp.open("./sender/Temp.txt");
 
 	cout << "Temp sensor values are below:" << endl;
 
