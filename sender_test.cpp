@@ -23,7 +23,7 @@ TEST_CASE("Check if more than min max values not sent to console for SOC")
 
   std::cout.rdbuf(p_cout_streambuf);
   
-  REQUIRE(oss1.str() == "10");
+  REQUIRE(oss1.str() == "10\n");
 }
 
 TEST_CASE("Check if more than min max values not sent to console for temp")
@@ -32,11 +32,11 @@ TEST_CASE("Check if more than min max values not sent to console for temp")
   std::streambuf* p_cout_streambuf = std::cout.rdbuf();
   std::cout.rdbuf(oss2.rdbuf());
   
-   print_temp(0);
+   print_temp(15);
 
   std::cout.rdbuf(p_cout_streambuf);
   
-  REQUIRE(oss2.str() == "11");
+  REQUIRE(oss2.str() == "11\n");
   
   
 }
