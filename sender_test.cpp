@@ -23,13 +23,13 @@ TEST_CASE("Check if more than min max values not sent to console")
 
   std::cout.rdbuf(p_cout_streambuf);
   
-  REQUIRE(oss.str() == "12\n");
+  REQUIRE(oss.str() == "10\n");
   
    print_temp(0);
 
   std::cout.rdbuf(p_cout_streambuf);
   
-  REQUIRE(oss.str() == "11\n");
+  REQUIRE(oss.str() == "12\n");
   
   
 }
