@@ -13,7 +13,7 @@ int SOC_generate_values()
 {
 	int soc_value = 0;
 	ifstream SOC;
-	SOC.open("SOC.txt");
+	SOC.open("SOC.txt", ios::out);
 	cout << "SOC sensor values are below:"<< endl;
 
 	while (SOC >> soc_value)
