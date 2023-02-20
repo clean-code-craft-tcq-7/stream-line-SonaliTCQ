@@ -19,7 +19,7 @@ TEST_CASE("Check if more than min max values not sent to console")
   std::streambuf* p_cout_streambuf = std::cout.rdbuf();
   std::cout.rdbuf(oss.rdbuf());
 
-  void print(10);
+  print_SOC(10);
 
   std::cout.rdbuf(p_cout_streambuf);
   
