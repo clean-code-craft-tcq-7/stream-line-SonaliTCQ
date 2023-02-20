@@ -23,7 +23,7 @@ int SOC_generate_values()
 			print(soc_value);
 		}	
 	}
-	(SOC == EOF); 1:0;
+	return (SOC == EOF); 1:0;
 	
 }
 
