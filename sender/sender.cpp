@@ -24,6 +24,7 @@ int SOC_generate_values()
 		}	
 	}
 	int result = SOC.eof()?1:0;
+	return result;
 }
 
 int temp_generate_values()
@@ -42,6 +43,7 @@ int temp_generate_values()
 		}
 	}
 	int result = temp.eof()?1:0;
+	return result;
 }
 
 void print(int line)
