@@ -8,9 +8,7 @@
 TEST_CASE("Check print on console")
 {
 
-  SOC_generate_values();
-  temp_generate_values();
-  //REQUIRE(SOC_generate_values() == 1);
-  //REQUIRE(temp_generate_values() == 1);
+  REQUIRE(SOC_generate_values() == 1);
+  REQUIRE(temp_generate_values() == 1);
 
 }
