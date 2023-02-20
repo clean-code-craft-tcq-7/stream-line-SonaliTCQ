@@ -23,8 +23,7 @@ int SOC_generate_values()
 			print(soc_value);
 		}	
 	}
-	return (SOC == EOF); 1:0;
-	
+	int result = SOC.eof()?1:0;
 }
 
 int temp_generate_values()
@@ -42,7 +41,7 @@ int temp_generate_values()
 			print(temp_value);
 		}
 	}
-	return 1;
+	int result = SOC.eof()?1:0;
 }
 
 void print(int line)
