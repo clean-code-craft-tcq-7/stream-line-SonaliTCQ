@@ -9,7 +9,7 @@ using namespace std;
 #define TEMP_MIN_VALUE 10
 
 
-void SOC_generate_values()
+int SOC_generate_values()
 {
 	int soc_value = 0;
 	ifstream SOC;
@@ -23,9 +23,10 @@ void SOC_generate_values()
 			print(soc_value);
 		}	
 	}
+	return FINISH;
 }
 
-void temp_generate_values()
+int temp_generate_values()
 {
 	int temp_value = 0;
 	ifstream temp;
@@ -40,7 +41,7 @@ void temp_generate_values()
 			print(temp_value);
 		}
 	}
-
+	return FINISH;
 }
 
 void print(int line)
