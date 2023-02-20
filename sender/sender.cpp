@@ -2,6 +2,8 @@
 #include<fstream>
 #include "sender.hpp"
 using namespace std;
+#include "SOC.txt"
+#include "Temp.txt"
 
 #define SOC_MAX_VALUE 20
 #define SOC_MIN_VALUE 0
@@ -14,7 +16,7 @@ int SOC_generate_values()
 	int soc_value = 0;
 	ifstream SOC;
 	SOC.open("SOC.txt");
-	cout << " SOC sensor values are below:"<< endl;
+	cout << "SOC sensor values are below:"<< endl;
 
 	while (SOC >> soc_value)
 	{
@@ -32,7 +34,7 @@ int temp_generate_values()
 	ifstream temp;
 	temp.open("Temp.txt");
 
-	cout << " Temp sensor values are below:" << endl;
+	cout << "Temp sensor values are below:" << endl;
 
 	while (temp >> temp_value)
 	{
