@@ -4,4 +4,4 @@
 int SOC_read_values();
 int temp_read_values();
 void print(int line);
-void send_values(int value, int max_no);
+void send_values(int, int);
