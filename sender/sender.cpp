@@ -3,26 +3,30 @@
 #include "sender.hpp"
 using namespace std;
 
-#define SOC_MAX_VALUE 20
+#define SOC_MAX_VALUE 51
 #define SOC_MIN_VALUE 0
-#define TEMP_MAX_VALUE 30
+#define TEMP_MAX_VALUE 61
 #define TEMP_MIN_VALUE 10
-
+#define STREAM_READINGS 50
 
 int SOC_generate_values()
 {
-	int soc_value = 0;
+	int soc_value = 0, nof_readings = 0;
 	ifstream SOC;
 	SOC.open("./sender/SOC.txt");
 	cout << "SOC sensor values are below:"<< endl;
 	while (SOC >> soc_value)
 	{
-		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE)
+		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE && nof_readings <= STREAM_READINGS)
 		{ 
 			print(soc_value);
-		}	
+			nof_readings ++;
+		}
+		else
+		{
+			return 1;
+		}
 	}
-	return 1;
 }
 
 int temp_generate_values()
