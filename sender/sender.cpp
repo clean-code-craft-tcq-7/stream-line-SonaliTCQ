@@ -4,30 +4,29 @@
 using namespace std;
 #include <map>
 
-#define SOC_MAX_VALUE 51
-#define SOC_MIN_VALUE 0
-#define TEMP_MAX_VALUE 61
-#define TEMP_MIN_VALUE 10
+#define MAX_VALUE 60
+#define MIN_VALUE 0
 #define STREAM_READINGS 50
 
 extern int nof_readings = 0;
 
-int SOC_generate_values()
+int main() {
+	return 0;
+}
+
+int SOC_read_values()
 {
-	int soc_value = 0 ;
+	int soc_value = 0;
 	ifstream SOC;
 	SOC.open("./sender/SOC.txt");
-	cout << "SOC sensor values are below:"<< endl;
+	cout << "SOC sensor values are below:" << endl;
 	while (SOC >> soc_value && nof_readings <= STREAM_READINGS)
 	{
-		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE)
-		{ 
-			print(soc_value);
-			nof_readings ++;
-		}
+		send_values(soc_value, nof_readings);
 	}
 	return 1;
 }
+
 
 int temp_generate_values()
 {
@@ -39,17 +38,21 @@ int temp_generate_values()
 
 	while (temp >> temp_value && nof_readings <= STREAM_READINGS)
 	{
-		if (temp_value < TEMP_MAX_VALUE && temp_value > TEMP_MIN_VALUE)
-		{
-			print(temp_value);
-			nof_readings ++;
-		}
+		send_values(temp_value, nof_readings);
 	}
 	return 1;
+}
+
+void send_values(int value, int max_no)
+{
+	if (value < MAX_VALUE && value > MAX_VALUE)
+	{
+		print(value);
+		max_no++;
+	}
 }
 
 void print(int line)
 {
 	cout << line << endl;
 }
-
