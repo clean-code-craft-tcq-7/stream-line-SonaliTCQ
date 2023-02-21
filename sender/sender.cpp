@@ -7,9 +7,11 @@ using namespace std;
 #define MIN_VALUE 0
 #define STREAM_READINGS 50
 
+extern int nof_readings;
+
 int SOC_read_values()
 {
-	int nof_readings = 0;
+	nof_readings = 0;
 	int soc_value = 0;
 	ifstream SOC;
 	SOC.open("./sender/SOC.txt");
@@ -24,7 +26,7 @@ int SOC_read_values()
 
 int temp_read_values()
 {
-	int nof_readings = 0;
+	nof_readings = 0;
 	int temp_value = 0;
 	ifstream temp;
 	temp.open("./sender/Temp.txt");
@@ -36,7 +38,7 @@ int temp_read_values()
 	return 1;
 }
 
-void send_values(int value, int max_no)
+void send_values(int value, int)
 {
 	if (value <= MAX_VALUE && value >= MIN_VALUE)
 	{
