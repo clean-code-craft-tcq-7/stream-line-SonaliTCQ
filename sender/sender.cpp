@@ -28,7 +28,7 @@ int SOC_read_values()
 }
 
 
-int temp_generate_values()
+int temp_read_values()
 {
 	int temp_value = 0;
 	ifstream temp;
@@ -43,12 +43,12 @@ int temp_generate_values()
 	return 1;
 }
 
-void send_values(int value, int max_no)
+void send_values(int value, int nof_readings)
 {
 	if (value < MAX_VALUE && value > MAX_VALUE)
 	{
 		print(value);
-		max_no++;
+		nof_readings++;
 	}
 }
 
