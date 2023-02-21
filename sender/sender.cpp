@@ -36,12 +36,12 @@ int temp_read_values()
 	return 1;
 }
 
-void send_values(int, int)
+void send_values(int value, int max_no)
 {
 	if (value <= MAX_VALUE && value >= MIN_VALUE)
 	{
 		print(value);
-		nof_readings++;
+		max_no++;
 	}
 }
 
