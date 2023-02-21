@@ -43,7 +43,7 @@ void send_values(int value, int)
 	if (value <= MAX_VALUE && value >= MIN_VALUE)
 	{
 		print(value);
-		max_no++;
+		nof_readings++;
 	}
 }
 
