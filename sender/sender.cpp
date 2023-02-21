@@ -10,10 +10,6 @@ using namespace std;
 
 extern int nof_readings = 0;
 
-int main() {
-	return 0;
-}
-
 int SOC_read_values()
 {
 	int soc_value = 0;
@@ -43,7 +39,7 @@ int temp_read_values()
 	return 1;
 }
 
-void send_values(int value, int nof_readings)
+void send_values(int value, nof_readings)
 {
 	if (value < MAX_VALUE && value > MAX_VALUE)
 	{
