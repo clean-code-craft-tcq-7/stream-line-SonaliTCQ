@@ -39,7 +39,7 @@ int temp_read_values()
 	return 1;
 }
 
-void send_values(int value, nof_readings)
+void send_values(int value, int)
 {
 	if (value < MAX_VALUE && value > MAX_VALUE)
 	{
