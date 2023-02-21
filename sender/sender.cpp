@@ -7,7 +7,7 @@ using namespace std;
 #define MIN_VALUE 0
 #define STREAM_READINGS 50
 
-extern int nof_readings;
+extern int nof_readings =0;
 
 int SOC_read_values()
 {
