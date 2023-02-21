@@ -10,7 +10,7 @@ using namespace std;
 #define TEMP_MIN_VALUE 10
 #define STREAM_READINGS 50
 
-extern nof_readings = 0;
+extern int nof_readings = 0;
 
 int SOC_generate_values()
 {
