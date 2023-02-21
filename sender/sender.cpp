@@ -17,12 +17,12 @@ int SOC_generate_values()
 	cout << "SOC sensor values are below:"<< endl;
 	while (SOC >> soc_value)
 	{
-		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE && nof_readings <= STREAM_READINGS)
+		if (soc_value < SOC_MAX_VALUE && soc_value > SOC_MIN_VALUE)
 		{ 
 			print(soc_value);
 			nof_readings ++;
 		}
-		else
+		if(nof_readings == STREAM_READINGS)
 		{
 			return 1;
 		}
