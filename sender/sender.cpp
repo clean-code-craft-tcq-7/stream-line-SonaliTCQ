@@ -41,7 +41,7 @@ int temp_read_values()
 
 void send_values(int value, int)
 {
-	if (value < MAX_VALUE && value > MAX_VALUE)
+	if (value <= MAX_VALUE && value >= MIN_VALUE)
 	{
 		print(value);
 		nof_readings++;
