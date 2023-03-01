@@ -1,1 +1,0 @@
-void readFromTest(char* testStringBuffer);
